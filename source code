@@ -1,0 +1,30 @@
+
+questions = [
+    ("Andhra Pradesh", "Amaravati"),
+    ("Arunachal Pradesh", "Itanagar"),
+    ("Assam", "Dispur"),
+    ("Bihar", "Patna"),
+    ("Chhattisgarh", "Raipur"),
+    # Add more states and capitals as needed
+]
+
+def quiz():
+    score = 0
+    total_questions = len(questions)
+    
+    print("Welcome to the States and Capitals Quiz!")
+    print("Identify the capital of the following states:\n")
+
+    for state, correct_capital in questions:
+        user_answer = input(f"What is the capital of {state}? ").strip()
+        if user_answer.lower() == correct_capital.lower():
+            print("Correct!\n")
+            score += 1
+        else:
+            print(f"Incorrect! The correct answer is {correct_capital}.\n")
+
+    print(f"Quiz Complete! Your final score is: {score}/{total_questions}")
+
+# Run the quiz
+if __name__ == "__main__":
+    quiz()
